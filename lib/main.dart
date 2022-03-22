@@ -38,8 +38,16 @@ class  MyHomePage extends StatelessWidget {
         Column(
           children: [
             Text("student enrollment"),
-            Image.asset("assets/men.webp"),
+            Image.network('https://cdn-icons-png.flaticon.com/512/146/146031.png' , width: 70,),
             SizedBox(height: 40,),
+             Container(
+                             
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  bottom: BorderSide(color: Colors.black ,),
+                                ),
+                              ),
+                            ),
             TextFormField(
               decoration: InputDecoration(
                 icon: Icon(Icons.person),
@@ -50,13 +58,13 @@ class  MyHomePage extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 labelText: "First Name",
-               
+               // prefixIcon: Icon(Icons.person),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
             ),
             SizedBox(height: 15,),
             TextFormField(
               decoration: InputDecoration(
-                   
+                   //icon: Icon(Icons.person),
                 labelText: "Last Name",
                 ),
             ),
@@ -64,14 +72,14 @@ class  MyHomePage extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 labelText: " Password",
-              
+               // prefixIcon: Icon(Icons.person),
                 ),
             ),
             SizedBox(height: 15,),
             TextFormField(
               decoration: InputDecoration(
                 labelText: " @ Email",
-                
+                //prefixIcon: Icon(Icons.person),
                 ),
             ),
             SizedBox(height: 15,),
@@ -82,17 +90,7 @@ class  MyHomePage extends StatelessWidget {
                 ),
             ),
             SizedBox(height: 15,),
-            
-           GestureDetector(
-           onTap: () {
-             print("true");
-           },
-             child: Container(
-               width: 300,
-               height: 50,
-               
-             ),
-           )
+           
           ],
         )
         ),
